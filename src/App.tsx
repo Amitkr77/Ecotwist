@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { Navbar } from './components/Navbar';
-import { Footer } from './components/Footer';
+// import { Navbar } from './components/Navbar';
+// import { Footer } from './components/Footer';
 
 // ── Core pages (default exports) ──────────────────────
 import { Home } from "./pages/Home";
@@ -93,11 +93,11 @@ export default function App() {
   return (
     <Router>
       <div className="flex flex-col min-h-screen">
-        <Navbar />
+        {/* <Navbar /> */}
         <main className="flex-grow">
           <AnimatedRoutes />
         </main>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </Router>
   );
