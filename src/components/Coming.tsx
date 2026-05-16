@@ -60,7 +60,7 @@ export default function EcotwistComingSoon() {
   ];
 
   return (
-    <div className="min-h-screen overflow-hidden bg-[#0f1115] text-white">
+   <div className="min-h-screen overflow-hidden bg-brand-beige text-brand-dark-olive">
       {/* Background */}
       <div className="absolute inset-0 -z-10">
         <img
@@ -86,16 +86,16 @@ export default function EcotwistComingSoon() {
       </div>
 
       {/* Navbar */}
-      <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-black/20 backdrop-blur-xl">
+      <header className="fixed top-0 z-50 w-full border-b border-[#b5a26a]/20 bg-brand-beige/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             className="flex items-center gap-2"
           >
-            <Leaf className="h-5 w-5 text-lime-300" />
+            <Leaf className="h-5 w-5 text-brand-olive" />
 
-            <h1 className="text-2xl font-semibold tracking-wide text-lime-200">
+            <h1 className="text-2xl font-semibold tracking-wide text-brand-olive">
               Ecotwist
             </h1>
           </motion.div>
@@ -106,7 +106,7 @@ export default function EcotwistComingSoon() {
                 <a
                   key={item}
                   href="#"
-                  className="text-sm text-zinc-300 transition hover:text-lime-200"
+                  className="text-sm text-zinc-500 transition hover:text-brand-dark-olive"
                 >
                   {item}
                 </a>
@@ -115,11 +115,11 @@ export default function EcotwistComingSoon() {
           </nav>
 
           <div className="flex items-center gap-4">
-            <button className="rounded-full border border-white/10 bg-white/5 p-2 transition hover:bg-white/10">
+            <button className="rounded-full border border-[#b5a26a]/20 bg-white p-2 transition hover:bg-white/10">
               <Search className="h-5 w-5" />
             </button>
 
-            <button className="rounded-full border border-white/10 bg-white/5 p-2 transition hover:bg-white/10">
+            <button className="rounded-full border border-[#b5a26a]/20 bg-white p-2 transition hover:bg-white/10">
               <ShoppingBag className="h-5 w-5" />
             </button>
           </div>
@@ -132,7 +132,7 @@ export default function EcotwistComingSoon() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="mb-5 text-xs uppercase tracking-[0.4em] text-lime-300"
+          className="mb-5 text-xs uppercase tracking-[0.4em] text-brand-olive"
         >
           Coming Soon
         </motion.span>
@@ -141,7 +141,7 @@ export default function EcotwistComingSoon() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="max-w-4xl bg-gradient-to-b from-white to-zinc-500 bg-clip-text text-5xl font-semibold leading-tight text-transparent md:text-7xl"
+          className="max-w-4xl bg-gradient-to-b from-brand-dark-olive to-brand-olive bg-clip-text text-5xl font-semibold leading-tight text-transparent md:text-7xl"
         >
           Launching a New Era of Conscious Luxury
         </motion.h2>
@@ -171,9 +171,9 @@ export default function EcotwistComingSoon() {
                 scale: 1.03,
               }}
               transition={{ type: "spring", stiffness: 200 }}
-              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl"
+              className="group relative overflow-hidden rounded-3xl border border-[#b5a26a]/20 bg-white p-8 backdrop-blur-xl"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-lime-300/10 to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
+              <div className="absolute inset-0 bg-gradient-to-br from-brand-olive/10 to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
 
               <motion.div
                 key={item.value}
@@ -182,7 +182,7 @@ export default function EcotwistComingSoon() {
                 transition={{ duration: 0.3 }}
                 className="relative z-10"
               >
-                <div className="text-5xl font-bold text-white">
+                <div className="text-5xl font-bold text-brand-dark-olive">
                   {item.value}
                 </div>
 
@@ -204,7 +204,7 @@ export default function EcotwistComingSoon() {
           <input
             type="email"
             placeholder="Enter your email"
-            className="flex-1 rounded-2xl border border-white/10 bg-white/5 px-6 py-4 text-white placeholder:text-zinc-500 outline-none backdrop-blur-xl transition focus:border-lime-300"
+            className="flex-1 rounded-2xl border border-[#b5a26a]/20 bg-white px-6 py-4 text-brand-dark-olive placeholder:text-zinc-500 outline-none backdrop-blur-xl transition focus:border-lime-300"
           />
 
           <motion.button
@@ -239,7 +239,7 @@ export default function EcotwistComingSoon() {
             <a
               key={item}
               href="#"
-              className="group flex items-center gap-2 text-zinc-400 transition hover:text-lime-200"
+              className="group flex items-center gap-2 text-zinc-400 transition hover:text-brand-olive"
             >
               <span>{item}</span>
 
@@ -250,10 +250,10 @@ export default function EcotwistComingSoon() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-white/10 bg-black/20 px-6 py-10 backdrop-blur-xl lg:px-12">
+      <footer className="border-t border-[#b5a26a]/20 bg-brand-beige/20 px-6 py-10 backdrop-blur-xl lg:px-12">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 md:flex-row">
           <div>
-            <h3 className="text-2xl font-semibold text-lime-200">
+            <h3 className="text-2xl font-semibold text-brand-olive">
               Ecotwist
             </h3>
 
@@ -263,19 +263,19 @@ export default function EcotwistComingSoon() {
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-zinc-400">
-            <a href="#" className="hover:text-lime-200">
+            <a href="#" className="hover:text-brand-olive">
               Privacy Policy
             </a>
 
-            <a href="#" className="hover:text-lime-200">
+            <a href="#" className="hover:text-brand-olive">
               Terms
             </a>
 
-            <a href="#" className="hover:text-lime-200">
+            <a href="#" className="hover:text-brand-olive">
               Contact
             </a>
 
-            <a href="#" className="hover:text-lime-200">
+            <a href="#" className="hover:text-brand-olive">
               Sustainability
             </a>
           </div>
