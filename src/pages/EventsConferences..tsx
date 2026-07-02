@@ -7,11 +7,20 @@ import {
   useMotionValue,
   useInView,
 } from 'motion/react';
+import eventhero  from '../assests/eventhero.png';
+import philosophy from '../assests/philosophy.png';
+import swag from '../assests/sustanableswag.png';
+import vip from '../assests/viphamper.png';
+import speaker from "../assests/speaker.png";
+import teamkit from "../assests/teamkit.png";
+import carafe from "../assests/glass carafe.png";
+import journal from "../assests/bamboojournal.png";
+import tetra from "../assests/tetra.png";
+import Canvas from "../assests/tote.png";
+import bespoke from "../assests/bespoke.png";
 import type { Variants } from 'motion/react';
 
-/* ═════════════════════════════════════════════════════════
-   BRAND TOKENS
-═════════════════════════════════════════════════════════ */
+/* BRAND TOKENS */
 const BRAND = {
   deepOlive: '#444f36',
   sage: '#708156',
@@ -928,10 +937,10 @@ const vSlideRight: Variants = {
    DATA
 ═════════════════════════════════════════════════════════ */
 const PRODUCTS = [
-  { name: 'Boreal Glass Carafe', sub: 'Borosilicate & Bamboo', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBmRuIOmg1NAdBCr5X_fi6akCrZ8VpiStdKmzebS8wdjCEVq7-0dSqnqCxXAEe5BkCIhXOJVbtnu1lRQvgQWJjBcQgipqT5c7GQeclbaoSOaPvnE_-9zIbuc0fMkM-F9HYUyvzgVCv_Fy11ON1gcg8Op2ZpoaECFCLuoj4qfRq3wBkWRwi5bxRkK-XCQHl1uMhpDw3Dh7ng89Z-tENfHVPbTtnd546NzkuhINa7Xp7iH5XILl1S9Cu5AXx3YRxLOr9CjXiHza1odKSB' },
-  { name: 'Zenith Bamboo Journal', sub: 'Sustainable FSC Paper', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDj6HNMW9cmGK1G0J3PJZrN932c2OgPmuTUl-BoilZ5w6sURvJYMmooZ9x-NKKpVHCL-qFLCdL5i897AUU_DbuXD382DvX_7m2WoL_5Mx9h0q9R8xduaT9ap4-FNjLp86npcGrKeW2-0vE93TSzcqb-ejeB81bxjujhHcUgURVewew7AgQsmfOPMKQzjun5yigGDwt_jHK1akKIsowmEhG3zMwl4NL8zMEzagGIr1K1R1m_oD-ztH8gcccNS267Or-3LLZJO3YFZAHZ' },
-  { name: 'Terra Ceramic Tumbler', sub: 'Artisan Crafted', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDR0Ne1Ni-LHMWrUypo_eCLOsciQK1qUTMhwWAlJvdn0xAzW1A5wSuENc3xO5IZ1VzrAkzdetk0ToeDkn1PaoY1i30MT2XR-4HHOKDJL7EaFhOLFoHnVQT7-JjtYD7B5SOvlSqS3aO7w4J3mCmW0qjgwgmj9Zatb8fJbZ5atx8arUZhcygjZAn3T7a1nTrjHUrMzLXTxj2Z-c7wNgej8i-aBFhjI-gH_ABDE6AcK-iRpwQaVsqk_cZev1_hgMZKEi4tE-r9xVIuZMAA' },
-  { name: 'Heritage Canvas Tote', sub: 'GOTS Certified Cotton', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD2o7hZqtmfVnGpB6o5WnLDWPJf9TNRrav1Bep1UsWehN2F1mrqZriCxVk9c9T6FqsvgvXSmosjqz7iCisJKV5qlwlpRpSF54TesGbGKaXdEIkwookM4kMCRAivNDR7F6G_1yuddl1gqa6TF8427ecgwAnkoLBV0hh3i99VC9icoAhvky48rDGD2RirvQfz1layl2y-j5C28ElzP_DElod-sBcfm-u1nz7pehDvqpQwTYrC6fdB8QSSuvMCyW1RP9MJ4OAiKOylaa4t' },
+  { name: 'Boreal Glass Carafe', sub: 'Borosilicate & Bamboo', img: carafe},
+  { name: 'Zenith Bamboo Journal', sub: 'Sustainable FSC Paper', img: journal },
+  { name: 'Terra Ceramic Tumbler', sub: 'Artisan Crafted', img: tetra },
+  { name: 'Heritage Canvas Tote', sub: 'GOTS Certified Cotton', img: Canvas },
 ];
 
 const BENTO_CARDS = [
@@ -939,19 +948,19 @@ const BENTO_CARDS = [
     key: 'vip', label: 'VIP Hampers',
     desc: 'Exquisite luxury for your most esteemed keynote speakers and executive guests.',
     col: 'span 2', row: 'span 2', large: true,
-    img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD_pxMEijWLJ3gStNHPjYGjbSFF03MhRH7-fIxvnpaanC1yP5DPs98Wi34KIfGwell-oZz-x-VrqVtO74zemZiA9O2t4CdJn-XlFVvR-45lL57mCxoW7YlNM-p1OwwAs9ZTdTq5qW1c6b4FTKjDcR15sSTcjIpUNWGmvIFMzcu5Uyt9V_tVatNfvgh6pLWn2lY4fp7G9r1mJ537Js9WMWCf15v_lzO_7tdJWuIXoKQfFwjGxHnpnEVDv9swwa9NH9n1KEtkKiSeeGDM',
+    img: vip,
   },
   {
     key: 'swag', label: 'Sustainable Swag', col: 'span 2', row: 'span 1', large: false,
-    img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCb5SOY7PKxWkCY72QX3CAXNVK1HKrMo7zb_-2AVBJNhJJiQxT-M3SZ0ppkcTH2sGFRB56DKV6X5QKqtsmdRq_5qcFu05kTkTTW62XtRaWfvH1-wIwOlUxwaMpfjhCqAsVLQdOjSud3OOh8e0UjV-ZGdT3_GaG70Q1y8VOIiJEdY9A2UdYqXFpiaRMu_4Dd2McjkV9NAKQz-pr3s02OjOMpKALISYv_KfQplDOQQYlmhwh5W-s87KcRcmkhJ4iEoQuA_-eZaa4LWj0P',
+    img: swag,
   },
   {
     key: 'speaker', label: 'Speaker Gifts', col: 'span 1', row: 'span 1', large: false,
-    img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDGkZiyfOqdcbe4ffuadP0QyHQZtMXKQQfFnDDORTrsrSn81CirBa8xTdlUSNck-dRrXbBp3MDoArfFTaVdYo1iWQfxQaDH2oje-Vb3ruvavKjZ2R2QVdUWuJDZ6MCUZTUPC-qSAoW9ueFFKxk5n_m0gKzxxdyxFTcxmu8NOm1rqobNHRKMMlPfY3jHXF1bcjNK5QM0B4eDYqQHlczqy1Wn7GgunsCQltti4ook9_fvnWHIjsYeXQQoPwSkuAPb2bLH-iTLX9lW809-',
+    img: speaker,
   },
   {
     key: 'team', label: 'Team Kits', col: 'span 1', row: 'span 1', large: false,
-    img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB_yWOOkb77VJJwNC_RvjtKGriZSDZhZuQ4Sjl_-WFhukqNmKMyLRUwD53YVx1QWbAYKGeQ-1xABJbVEbKNxZQ0NmyEEZ6E669vtyPwN_dyOpum3_kcZNvSUz05BSAkiYRbZIpevtht1jBLCLfrgHWc8E3pxyTerKoi1h-ux2zMIL9bXerQzZuG60TYWe9krJL7q8xqwwqt2Ynipr7lsLIm7C-ShxWyNp3WPYIxnozab-LYYSoYJcurK-dHYKmKIOz5ExGUFB3LhcXd',
+    img: teamkit,
   },
 ];
 
@@ -1113,7 +1122,7 @@ export default function EventsConferences() {
         {/* Parallax Background */}
         <motion.div style={{ y: springImg, willChange: 'transform' }} className="absolute inset-0">
           <img
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBovXd8GTgExtTT-ykDXV6oujbJeZgvTJ0kpuanb6pJbg57kZmrovGQIdCPXy_eHVspOeoJHLTwCXkvXqEvlJ0DByvsEmmOR0r6HlPU50zZLrh3XJosz1uh2adkawmLgYrZt7G2zcGo9Q6vm3GvtH-psOTCrzCceh6HgkqEz3Ry2QJ_JyEksF75ZlXh70IVhiafb2G1XCPDtdLlhjpAtbbS0Ix2ap-R5yA3IsyZprV-2H8YcQWLnJBAXtiZ9KTm5A51EsdJtQlWlc5X"
+            src={eventhero}
             alt="Hero"
             className="w-full h-full object-cover"
             style={{ minHeight: '120%', filter: 'brightness(0.42)' }}
@@ -1250,7 +1259,7 @@ export default function EventsConferences() {
             <motion.div ref={aRef} onMouseMove={aMM} onMouseLeave={aML} style={{ rotateX: aX, rotateY: aY, transformStyle: 'preserve-3d', willChange: 'transform', position: 'relative' }}>
               <motion.div className="absolute -inset-1 border border-gray-300" style={{ transform: 'translate(16px,16px)', zIndex: 0 }} whileHover={{ x: 8, y: 8 } as any} />
               <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwIX5PTxZmL6ljd-KY1zM19-KhVOJdkK5p3kGRVOixP-r2FluyVfNmy0NVcJB2D422BIgUtiRYm-fbeurjmXrufEFGNf91h3dlo-19MCBaPxocg3mhlzXr90I9qBaacwvVPBWiCnALbbq_8sDdol5XhsSUnaxCVFuH1JJpdRby_MPyR6dk7vBuJ2gPArqgsnBO4-vaCR_EUN-za8jXx2ZhP_xef0ZkOZ-xgVSopwlE2utcRGbA8O-XggqwAym3-wo24VSkiWFS_6Wz"
+                src={philosophy}
                 alt="About" className="relative w-full shadow-2xl rounded-lg" style={{ aspectRatio: '4/5', objectFit: 'cover', zIndex: 1 }}
               />
             </motion.div>
@@ -1259,40 +1268,40 @@ export default function EventsConferences() {
       </section>
 
       {/* ══ BENTO GRID ══ */}
-<section
-  ref={catRef}
-  className="py-20 sm:py-24 md:py-32 px-4 sm:px-8 md:px-20 lg:px-32 overflow-hidden"
-  style={{ background: '#f1f0ed' }}
->
-  <div className="max-w-7xl mx-auto">
+      <section
+        ref={catRef}
+        className="py-20 sm:py-24 md:py-32 px-4 sm:px-8 md:px-20 lg:px-32 overflow-hidden"
+        style={{ background: '#f1f0ed' }}
+      >
+        <div className="max-w-7xl mx-auto">
 
-    {/* HEADER */}
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={catInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-      transition={{ duration: 0.6 }}
-      className="text-center mb-10 sm:mb-14"
-    >
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-4" style={{ color: '#3d3a34' }}>
-        Explore Our Collections
-      </h2>
+          {/* HEADER */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={catInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-10 sm:mb-14"
+          >
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-4" style={{ color: '#3d3a34' }}>
+              Explore Our Collections
+            </h2>
 
-      <p className="font-light max-w-lg mx-auto text-xs sm:text-sm" style={{ color: '#968f80' }}>
-        Tailored solutions for every touchpoint of your corporate event journey.
-      </p>
-    </motion.div>
+            <p className="font-light max-w-lg mx-auto text-xs sm:text-sm" style={{ color: '#968f80' }}>
+              Tailored solutions for every touchpoint of your corporate event journey.
+            </p>
+          </motion.div>
 
-    {/* GRID */}
-    <div
-      className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
-    >
-      {BENTO_CARDS.map((card, i) => (
-        <BentoCard key={card.key} card={card} index={i} />
-      ))}
-    </div>
+          {/* GRID */}
+          <div
+            className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
+          >
+            {BENTO_CARDS.map((card, i) => (
+              <BentoCard key={card.key} card={card} index={i} />
+            ))}
+          </div>
 
-  </div>
-</section>
+        </div>
+      </section>
 
       {/* ══ PRODUCTS ══ */}
       <section ref={prodRef} className="py-32 px-8 md:px-20 lg:px-32 bg-white">
@@ -1315,7 +1324,7 @@ export default function EventsConferences() {
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
           <motion.div variants={vSlideLeft} initial="hidden" animate={custInView ? 'show' : 'hidden'} style={{ position: 'relative' }}>
             <div className="absolute -top-12 -left-12 rounded-full opacity-50" style={{ width: 256, height: 256, background: '#363f2c', filter: 'blur(60px)' }} />
-            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL9f7Y6XLRFeopFMwhI2tAMelALv1jZuTG36dazTJuVpLudPbfPRZBdE0pLTcZG_59Wu3myrZny8Xnp984MvD4R88UkxaO0RdZXHR1wCxkcOyJNw6QxDQXcFYKSBCRf9HM3an79iK36J4dHrP4mvveNfiiBlp_USqIMazabNkUO4cCWcmCGWvYtQo9tM6ZERF-joXJLqUhSsXF3TUxP26Kw6TstvrHP8hO6LQi3Cr6JCYqiKWWTsUhZXPS4S0e0L2wphGNKURzeA4c" alt="Custom" className="relative w-full rounded-lg shadow-2xl" style={{ zIndex: 1 }} />
+            <img src={bespoke} alt="Custom" className="relative w-full rounded-lg shadow-2xl" style={{ zIndex: 1 }} />
           </motion.div>
           <motion.div variants={vSlideRight} initial="hidden" animate={custInView ? 'show' : 'hidden'}>
             <p className="text-[10px] uppercase tracking-[0.28em] font-bold text-white/60 mb-4">Bespoke Details</p>
