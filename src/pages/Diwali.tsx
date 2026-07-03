@@ -7,6 +7,18 @@ import {
 } from "motion/react";
 import type { Variants } from "motion/react";
 import { useNavigate } from "react-router-dom";
+import hamper from "../assests/diwalihamper.png";
+import folio from "../assests/dewaliportfolio.png"
+import cxo from "../assests/cxogift.png"
+import delight from "../assests/delight.png"
+import celebration from "../assests/familyceleb.png"
+import hamper1 from "../assests/clienthamper.png"
+import wellnesshamper from "../assests/Wellnesshamper.png"
+import gourmethamper from "../assests/gourmethamper.png"
+import signature from "../assests/signhamper.png"
+import curated from "../assests/curated.png"
+import branding from "../assests/branding.png"
+import sustain from "../assests/sustainable.png"
 import {
   ArrowRight,
   Sparkles,
@@ -174,42 +186,42 @@ const DIWALI_COLLECTIONS = [
   {
     title: "Executive Luxury",
     subtitle: "For CXOs & Leadership",
-    image: "/images/executive-hamper.jpg",
+    image: cxo,
     tag: "Premium",
     color: "#C5A059",
   },
   {
     title: "Employee Delight",
     subtitle: "Celebrate Every Team Member",
-    image: "/images/employee-hamper.jpg",
+    image: delight,
     tag: "Popular",
     color: "#4A5D23",
   },
   {
     title: "Client Appreciation",
     subtitle: "Build Strong Relationships",
-    image: "/images/client-hamper.jpg",
+    image: hamper1,
     tag: "Corporate",
     color: "#B98C3E",
   },
   {
     title: "Wellness Collection",
     subtitle: "Healthy & Sustainable",
-    image: "/images/wellness-hamper.jpg",
+    image: wellnesshamper,
     tag: "Eco",
     color: "#4A5D23",
   },
   {
     title: "Family Celebration",
     subtitle: "Traditional Festive Joy",
-    image: "/images/family-hamper.jpg",
+    image: celebration,
     tag: "Festive",
     color: "#C5A059",
   },
   {
     title: "Premium Gourmet",
     subtitle: "Artisan Treats & Delicacies",
-    image: "/images/gourmet-hamper.jpg",
+    image: gourmethamper,
     tag: "Luxury",
     color: "#8C6A35",
   },
@@ -738,16 +750,16 @@ const navigate = useNavigate();
                     rotate: 0,
                     }}
 
-                    className="relative z-20"
+                    className="relative z-20 right-20 top-26"
 
                 >
 
                     <div className="bg-white rounded-[24px] sm:rounded-[32px] shadow-2xl overflow-hidden p-3 sm:p-5 border border-gray-200">
 
                     <img
-                        src="/images/diwali-hamper.png"
+                        src={hamper}
                         alt="Luxury Diwali Hamper"
-                        className="w-[220px] sm:w-[320px] lg:w-[420px] object-cover rounded-2xl"
+                        className="w-[120px] sm:w-[220px] lg:w-[260px] object-cover rounded-2xl"
                     />
 
                     </div>
@@ -1181,7 +1193,7 @@ const navigate = useNavigate();
 
                   transition={{ duration:.8 }}
 
-                  src="/images/diwali-story.jpg"
+                  src={folio}
 
                   alt="Diwali"
 
@@ -1544,7 +1556,7 @@ const navigate = useNavigate();
 
                 <img
 
-                  src="/images/signature-hamper.jpg"
+                  src={signature}
 
                   alt="Signature Hamper"
 
@@ -1926,11 +1938,11 @@ const navigate = useNavigate();
                   repeat: Infinity,
                 }}
 
-                src="/images/hamper-open.png"
+                src={curated}
 
                 alt="Hamper"
 
-                className="relative z-10 w-full max-w-md"
+                className="relative z-10 w-full max-w-md rounded-3xl"
 
               />
 
@@ -2118,7 +2130,7 @@ const navigate = useNavigate();
                   duration: .7,
                 }}
 
-                src="/images/personalisation.jpg"
+                src={branding}
 
                 alt="Corporate Branding"
 
@@ -2399,7 +2411,7 @@ const navigate = useNavigate();
 
               <img
 
-                src="/images/sustainability.jpg"
+                src={sustain}
 
                 alt="Sustainability"
 
