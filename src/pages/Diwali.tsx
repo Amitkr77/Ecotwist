@@ -19,6 +19,12 @@ import signature from "../assests/signhamper.png"
 import curated from "../assests/curated.png"
 import branding from "../assests/branding.png"
 import sustain from "../assests/sustainable.png"
+import dryfruits from "../assests/dryfruit.png"
+import liuxurybox from "../assests/luxurybox.png"
+import festworkspace from "../assests/festworkspace.png"
+import gifthing from "../assests/empgifting.png"
+import packaging from "../assests/prepackaging.png"
+import luxhamper from "../assests/luxuryhamper.png"
 import {
   ArrowRight,
   Sparkles,
@@ -2922,40 +2928,40 @@ const navigate = useNavigate();
 
             {[
               {
-                image: "/images/gallery1.jpg",
+                image: liuxurybox,
                 title: "Executive Luxury Box",
                 category: "Corporate Collection",
                 height: "h-[520px]",
               },
               {
-                image: "/images/gallery2.jpg",
+                image: festworkspace,
                 title: "Festive Workspace",
                 category: "Corporate Celebration",
-                height: "h-[320px]",
+                height: "h-[520px]",
               },
               {
-                image: "/images/gallery3.jpg",
+                image: packaging,
                 title: "Premium Packaging",
                 category: "Luxury Finish",
-                height: "h-[420px]",
+                height: "h-[520px]",
               },
               {
-                image: "/images/gallery4.jpg",
+                image: dryfruits,
                 title: "Dry Fruit Collection",
                 category: "Premium Selection",
-                height: "h-[420px]",
+                height: "h-[520px]",
               },
               {
-                image: "/images/gallery5.jpg",
+                image: gifthing,
                 title: "Employee Gifting",
                 category: "Festive Moments",
                 height: "h-[520px]",
               },
               {
-                image: "/images/gallery6.jpg",
+                image: luxhamper,
                 title: "Luxury Hamper",
                 category: "Signature Collection",
-                height: "h-[320px]",
+                height: "h-[520px]",
               },
             ].map((item, index) => (
 
