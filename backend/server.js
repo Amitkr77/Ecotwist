@@ -42,3 +42,26 @@ app.post("/api/contact", async (req, res) => {
 app.listen(process.env.PORT || 5000, () => {
   console.log("Server running on port 5000");
 });
+
+const Configurator = require("./models/Configurator");
+
+app.post("/api/configurator", async (req, res) => {
+  try {
+    const configurator = new Configurator(req.body);
+
+    await configurator.save();
+
+    res.status(200).json({
+      success: true,
+      message: "Response saved successfully."
+    });
+
+  } catch (err) {
+    console.error(err);
+
+    res.status(500).json({
+      success: false,
+      message: "Failed to save response."
+    });
+  }
+});

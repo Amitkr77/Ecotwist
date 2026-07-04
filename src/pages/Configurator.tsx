@@ -241,6 +241,7 @@ export const Configurator = () => {
   const content  = stepContent[step];
   const [img1, img2] = images[step];
   const quote    = quotes[step];
+  
 
   return (
     <>
