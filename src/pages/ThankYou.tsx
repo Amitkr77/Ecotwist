@@ -61,6 +61,22 @@ const ThankYou = () => {
 
   const [count, setCount] = useState(0);
 
+  const submittedAt = new Date();
+
+const submissionDate = submittedAt.toLocaleDateString("en-IN", {
+  day: "2-digit",
+  month: "long",
+  year: "numeric",
+});
+
+const submissionTime = submittedAt.toLocaleTimeString("en-IN", {
+  hour: "2-digit",
+  minute: "2-digit",
+  second: "2-digit",
+});
+
+const submissionId = `ECO-${Date.now().toString().slice(-6)}`;
+
   useEffect(() => {
     let start = 0;
     const end = 24;
@@ -76,7 +92,7 @@ const ThankYou = () => {
       <FloatingParticles />
 
       {/* MAIN GRID */}
-      <div className="max-w-6xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-6xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-10 items-center">
 
         {/* LEFT */}
         <motion.div
@@ -167,136 +183,172 @@ const ThankYou = () => {
           transition={{ duration: 1 }}
           className="flex flex-col items-center"
         >
-          {/* Success Ring */}
-          <div className="-ml-12 mt-8">
+
+          {/* ================= RING ================= */}
+          <div className="translate-x-[-25px] translate-y-[20px]">
             <SuccessRing />
           </div>
 
-          {/* Submission ID */}
+          {/* ================= SUBMISSION TAG ================= */}
           <motion.div
-            className="mt-6 bg-white/70 backdrop-blur-xl px-8 py-5 rounded-xl border border-[#B8974A]/20 shadow-xl"
-            animate={{ y: [0, -8, 0] }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-            }}
+            className="mt-6 bg-white/70 backdrop-blur-xl px-8 py-4 rounded-xl border border-[#B8974A]/20 shadow-lg text-center"
+            animate={{ y: [0, -6, 0] }}
+            transition={{ duration: 3.5, repeat: Infinity }}
           >
             <p className="text-xs uppercase tracking-widest text-[#5A8A6E]">
               Submission ID
             </p>
 
-            <p className="font-bold text-[#2C2D1E] mt-2 text-lg">
-              ECO-{Date.now().toString().slice(-6)}
+            <p className="font-bold text-[#2C2D1E] mt-1 text-lg">
+              {submissionId}
             </p>
           </motion.div>
 
-          {/* Configuration Card */}
+          {/* ================= CONFIGURATION CARD ================= */}
           <motion.div
-            className="mt-8 w-full max-w-md bg-white/80 backdrop-blur-xl rounded-2xl border border-[#B8974A]/20 shadow-2xl overflow-hidden"
+            className="mt-8 w-full max-w-md bg-white/85 backdrop-blur-2xl rounded-2xl border border-[#B8974A]/25 shadow-2xl overflow-hidden"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
           >
-            {/* Header */}
-            <div className="bg-[#2C2D1E] text-white px-6 py-4">
+
+            {/* HEADER */}
+            <div className="bg-[#2C2D1E] text-white px-6 py-5">
               <h3 className="text-xl font-serif">
-                Your Configuration
+                Submission Summary
               </h3>
 
-              <p className="text-xs uppercase tracking-widest text-[#B8974A] mt-1">
-                Submission Summary
+              <p className="text-xs uppercase tracking-[0.25em] text-[#B8974A] mt-1">
+                EcoTwist Proposal Details
               </p>
             </div>
 
-            {/* Body */}
-            <div className="p-6 space-y-5">
+            {/* BODY (UNCHANGED) */}
+            <div className="p-6 space-y-8">
 
-              {/* Occasion */}
-              <div className="flex items-center justify-between border-b border-[#B8974A]/20 pb-3">
-                <div>
-                  <p className="text-xs uppercase tracking-widest text-[#2C2D1E]/50">
-                    Occasion
-                  </p>
+              {/* USER DETAILS */}
+              <div>
+                <p className="text-xs uppercase tracking-[0.25em] text-[#5A8A6E] font-semibold mb-5">
+                  Your Details
+                </p>
 
+                {/* Name */}
+                <div className="flex items-center justify-between border-b border-[#B8974A]/20 pb-3">
+                  <div>
+                    <p className="text-xs uppercase tracking-widest text-[#2C2D1E]/50">
+                      Full Name
+                    </p>
+                    <p className="text-lg font-semibold text-[#2C2D1E]">
+                      {configurator?.name || "Not Provided"}
+                    </p>
+                  </div>
+                  <CheckCircle size={18} className="text-green-600" />
+                </div>
+
+                {/* Company */}
+                <div className="flex items-center justify-between border-b border-[#B8974A]/20 py-3">
+                  <div>
+                    <p className="text-xs uppercase tracking-widest text-[#2C2D1E]/50">
+                      Company
+                    </p>
+                    <p className="text-lg font-semibold text-[#2C2D1E]">
+                      {configurator?.company || "Not Provided"}
+                    </p>
+                  </div>
+                  <CheckCircle size={18} className="text-green-600" />
+                </div>
+
+                {/* Email */}
+                <div className="flex items-center justify-between border-b border-[#B8974A]/20 py-3">
+                  <div>
+                    <p className="text-xs uppercase tracking-widest text-[#2C2D1E]/50">
+                      Work Email
+                    </p>
+                    <p className="text-lg font-semibold text-[#2C2D1E] break-all">
+                      {configurator?.email || "Not Provided"}
+                    </p>
+                  </div>
+                  <CheckCircle size={18} className="text-green-600" />
+                </div>
+
+                {/* Phone */}
+                <div className="flex items-center justify-between pt-3">
+                  <div>
+                    <p className="text-xs uppercase tracking-widest text-[#2C2D1E]/50">
+                      Mobile
+                    </p>
+                    <p className="text-lg font-semibold text-[#2C2D1E]">
+                      {configurator?.phone || "Not Provided"}
+                    </p>
+                  </div>
+                  <CheckCircle size={18} className="text-green-600" />
+                </div>
+              </div>
+
+              {/* DIVIDER */}
+              <div className="h-px bg-gradient-to-r from-transparent via-[#B8974A]/30 to-transparent" />
+
+              {/* CONFIGURATION */}
+              <div>
+                <p className="text-xs uppercase tracking-[0.25em] text-[#5A8A6E] font-semibold mb-5">
+                  Configuration
+                </p>
+
+                {/* Occasion */}
+                <div className="flex items-center justify-between border-b border-[#B8974A]/20 pb-3">
                   <p className="text-lg font-semibold text-[#2C2D1E]">
                     {configurator?.occasion || "Not Selected"}
                   </p>
+                  <CheckCircle size={18} className="text-green-600" />
                 </div>
 
-                <CheckCircle size={18} className="text-green-600" />
-              </div>
-
-              {/* Budget */}
-              <div className="flex items-center justify-between border-b border-[#B8974A]/20 pb-3">
-                <div>
-                  <p className="text-xs uppercase tracking-widest text-[#2C2D1E]/50">
-                    Budget
-                  </p>
-
+                {/* Budget */}
+                <div className="flex items-center justify-between border-b border-[#B8974A]/20 py-3">
                   <p className="text-lg font-semibold text-[#2C2D1E]">
                     {configurator?.budget || "Not Selected"}
                   </p>
+                  <CheckCircle size={18} className="text-green-600" />
                 </div>
 
-                <CheckCircle size={18} className="text-green-600" />
-              </div>
-
-              {/* Quantity */}
-              <div className="flex items-center justify-between border-b border-[#B8974A]/20 pb-3">
-                <div>
-                  <p className="text-xs uppercase tracking-widest text-[#2C2D1E]/50">
-                    Quantity
-                  </p>
-
+                {/* Quantity */}
+                <div className="flex items-center justify-between border-b border-[#B8974A]/20 py-3">
                   <p className="text-lg font-semibold text-[#2C2D1E]">
                     {configurator?.quantity || "Not Selected"}
                   </p>
+                  <CheckCircle size={18} className="text-green-600" />
                 </div>
 
-                <CheckCircle size={18} className="text-green-600" />
-              </div>
-
-              {/* Branding */}
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-xs uppercase tracking-widest text-[#2C2D1E]/50">
-                    Branding
-                  </p>
-
+                {/* Branding */}
+                <div className="flex items-center justify-between pt-3">
                   <p className="text-lg font-semibold text-[#2C2D1E]">
                     {configurator?.branding || "Not Selected"}
                   </p>
+                  <CheckCircle size={18} className="text-green-600" />
                 </div>
 
-                <CheckCircle size={18} className="text-green-600" />
               </div>
-
             </div>
 
-            {/* Footer */}
-            <div className="bg-[#F8F6F1] px-6 py-4 border-t border-[#B8974A]/20">
-
-              <div className="flex justify-between items-center">
-                <span className="text-sm text-[#2C2D1E]/60">
-                  Status
-                </span>
-
+            {/* FOOTER */}
+            <div className="bg-[#F8F6F1] px-6 py-5 border-t border-[#B8974A]/20">
+              <div className="flex justify-between">
+                <span className="text-sm text-[#2C2D1E]/60">Status</span>
                 <span className="px-3 py-1 rounded-full bg-green-100 text-green-700 text-xs font-semibold">
                   Received
                 </span>
               </div>
 
-              <div className="flex justify-between items-center mt-3">
-                <span className="text-sm text-[#2C2D1E]/60">
-                  Submission ID
-                </span>
-
-                <span className="font-semibold text-[#2C2D1E]">
-                  ECO-{Date.now().toString().slice(-6)}
-                </span>
+              <div className="flex justify-between mt-3">
+                <span className="text-sm text-[#2C2D1E]/60">Date</span>
+                <span className="font-semibold text-[#2C2D1E]">{submissionDate}</span>
               </div>
 
+              <div className="flex justify-between mt-3">
+                <span className="text-sm text-[#2C2D1E]/60">Time</span>
+                <span className="font-semibold text-[#2C2D1E]">{submissionTime}</span>
+              </div>
             </div>
+
           </motion.div>
         </motion.div>
       </div>

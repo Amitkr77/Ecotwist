@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowLeft, CheckCircle } from 'lucide-react';
 import { useNavigate, useLocation } from "react-router-dom";
 
@@ -135,6 +135,11 @@ const stepContent: any = {
     desc: 'Customize your gifts with premium branding options.',
     data: [{ title: 'Logo Print' }, { title: 'Custom Packaging' }, { title: 'Embroidery' }, { title: 'No Branding' }],
   },
+  5: {
+    title: "Your Details",
+    subtitle: "Tell us about",
+    desc: "Share your contact details so our gifting experts can prepare a personalized proposal.",
+  },
 };
 
 const images: any = {
@@ -142,6 +147,7 @@ const images: any = {
   2: ['https://images.unsplash.com/photo-1454165804606-c3d57bc86b40', 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e'],
   3: ['https://images.unsplash.com/photo-1521791136064-7986c2920216', 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f'],
   4: ['https://images.unsplash.com/photo-1556740738-b6a63e27c4df', 'https://images.unsplash.com/photo-1607082349566-187342175e2f'],
+  5: ['https://images.unsplash.com/photo-1556740738-b6a63e27c4df', 'https://images.unsplash.com/photo-1607082349566-187342175e2f'],
 };
 
 const quotes: any = {
@@ -149,14 +155,18 @@ const quotes: any = {
   2: { text: "Perfectly aligned with our budget and sustainability goals.",    author: "— Procurement Head" },
   3: { text: "Seamless bulk gifting experience with zero hassle.",             author: "— HR Manager" },
   4: { text: "Branding quality exceeded all expectations.",                    author: "— Marketing Director" },
+  5: { text: "Outstanding customer service throughout the gifting process.",   author: "— Operations Manager" },
 };
 
 const STEPS = [
-  { id: 1, label: '01. Occasion' },
-  { id: 2, label: '02. Budget' },
-  { id: 3, label: '03. Quantity' },
-  { id: 4, label: '04. Branding' },
+  { id: 1, label: "01. Occasion" },
+  { id: 2, label: "02. Budget" },
+  { id: 3, label: "03. Quantity" },
+  { id: 4, label: "04. Branding" },
+  { id: 5, label: "05. Your Details" },
 ];
+
+
 
 export const Configurator = () => {
 
@@ -176,6 +186,44 @@ export const Configurator = () => {
 
   const handleSelect = (value: string) =>
     setSelected(prev => ({ ...prev, [step]: value }));
+
+  const [userDetails, setUserDetails] = useState({
+    name: "",
+    company: "",
+    email: "",
+    phone: "",
+  });
+
+  const [errors, setErrors] = useState({
+    name: "",
+    company: "",
+    email: "",
+    phone: "",
+  });
+
+  const [touched, setTouched] = useState({
+    name: false,
+    company: false,
+    email: false,
+    phone: false,
+  });
+
+  const validateStep5 = () => {
+    const newErrors: any = {};
+
+    if (!userDetails.name) newErrors.name = "Name required";
+    if (!userDetails.company) newErrors.company = "Company required";
+
+    if (!userDetails.email.includes("@"))
+      newErrors.email = "Valid email required";
+
+    if (userDetails.phone.length < 10)
+      newErrors.phone = "Valid number required";
+
+    setErrors(newErrors);
+
+    return Object.keys(newErrors).length === 0;
+  };
 
   // 3-D tilt on option cards
   const onTilt = (e: React.MouseEvent, el: HTMLDivElement | null) => {
@@ -252,41 +300,148 @@ export const Configurator = () => {
                 {content.desc}
               </p>
 
-              {/* Option cards */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10" style={{ perspective:'1100px' }}>
-                {content.data.map((item: any) => {
-                  const isSel = selected[step] === item.title;
-                  let ref: HTMLDivElement | null = null;
-                  return (
-                    <div
-                      key={item.title}
-                      ref={(el: HTMLDivElement | null) => { ref = el; }}
-                      onClick={() => handleSelect(item.title)}
-                      onMouseMove={e => onTilt(e, ref)}
-                      onMouseLeave={() => onTiltLeave(ref, isSel)}
-                      className={`anim-card card-3d group relative p-8 border-2 cursor-pointer transition-colors
-                        ${isSel
-                          ? 'border-brand-dark-olive bg-white card-selected-line'
-                          : 'border-brand-dark-olive/10 bg-white/50 hover:bg-white hover:border-brand-dark-olive/30'
-                        }`}
-                    >
-                      {isSel && (
-                        <div className="absolute top-6 right-6 anim-check">
-                          <CheckCircle className="text-brand-dark-olive" size={20} />
-                        </div>
-                      )}
-                      <h3 className="font-serif text-2xl mb-3">{item.title}</h3>
-                      {item.desc && (
-                        <p className="text-sm text-brand-dark-olive/60 leading-relaxed">{item.desc}</p>
+              {/* Option cards / Step UI */}
+              <div
+                className="mb-10"
+                style={{ perspective: "1100px" }}
+              >
+                {step === 5 ? (
+                  /* ─────────────────────────────
+                    STEP 5 → YOUR DETAILS (FORM UI)
+                  ───────────────────────────── */
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                    {/* Full Name */}
+                    <div className="p-6 border border-brand-dark-olive/10 bg-white">
+                      <input
+                        type="text"
+                        placeholder="Full Name"
+                        value={userDetails.name}
+                        onChange={(e) =>
+                          setUserDetails(prev => ({
+                            ...prev,
+                            name: e.target.value
+                          }))
+                        }
+                        className="w-full outline-none text-brand-dark-olive placeholder:text-brand-dark-olive/40"
+                      />
+                      {errors.name && (
+                        <p className="text-xs text-red-500 mt-2">{errors.name}</p>
                       )}
                     </div>
-                  );
-                })}
+
+                    {/* Company */}
+                    <div className="p-6 border border-brand-dark-olive/10 bg-white">
+                      <input
+                        type="text"
+                        placeholder="Company Name"
+                        value={userDetails.company}
+                        onChange={(e) =>
+                          setUserDetails(prev => ({
+                            ...prev,
+                            company: e.target.value
+                          }))
+                        }
+                        className="w-full outline-none text-brand-dark-olive placeholder:text-brand-dark-olive/40"
+                      />
+                      {errors.company && (
+                        <p className="text-xs text-red-500 mt-2">{errors.company}</p>
+                      )}
+                    </div>
+
+                    {/* Email */}
+                    <div className="p-6 border border-brand-dark-olive/10 bg-white">
+                      <input
+                        type="email"
+                        placeholder="Work Email"
+                        value={userDetails.email}
+                        onChange={(e) =>
+                          setUserDetails(prev => ({
+                            ...prev,
+                            email: e.target.value
+                          }))
+                        }
+                        className="w-full outline-none text-brand-dark-olive placeholder:text-brand-dark-olive/40"
+                      />
+                      {errors.email && (
+                        <p className="text-xs text-red-500 mt-2">{errors.email}</p>
+                      )}
+                    </div>
+
+                    {/* Phone */}
+                    <div className="p-6 border border-brand-dark-olive/10 bg-white">
+                      <input
+                        type="tel"
+                        placeholder="Mobile Number"
+                        value={userDetails.phone}
+                        onChange={(e) =>
+                          setUserDetails(prev => ({
+                            ...prev,
+                            phone: e.target.value
+                          }))
+                        }
+                        className="w-full outline-none text-brand-dark-olive placeholder:text-brand-dark-olive/40"
+                      />
+                      {errors.phone && (
+                        <p className="text-xs text-red-500 mt-2">{errors.phone}</p>
+                      )}
+                    </div>
+
+                  </div>
+                ) : (
+                  /* ─────────────────────────────
+                    STEP 1–4 → OPTION CARDS
+                  ───────────────────────────── */
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {content?.data?.map((item: any) => {
+                      const isSel = selected[step] === item.title;
+
+                      let ref: HTMLDivElement | null = null;
+
+                      return (
+                        <div
+                          key={item.title}
+                          ref={(el) => {
+                            ref = el;
+                          }}
+                          onClick={() => handleSelect(item.title)}
+                          onMouseMove={(e) => onTilt(e, ref)}
+                          onMouseLeave={() => onTiltLeave(ref, isSel)}
+                          className={`anim-card card-3d group relative p-8 border-2 cursor-pointer transition-colors
+                            ${
+                              isSel
+                                ? "border-brand-dark-olive bg-white card-selected-line"
+                                : "border-brand-dark-olive/10 bg-white/50 hover:bg-white hover:border-brand-dark-olive/30"
+                            }`}
+                        >
+                          {isSel && (
+                            <div className="absolute top-6 right-6 anim-check">
+                              <CheckCircle
+                                className="text-brand-dark-olive"
+                                size={20}
+                              />
+                            </div>
+                          )}
+
+                          <h3 className="font-serif text-2xl mb-3">
+                            {item.title}
+                          </h3>
+
+                          {item.desc && (
+                            <p className="text-sm text-brand-dark-olive/60 leading-relaxed">
+                              {item.desc}
+                            </p>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
               </div>
 
               {/* Progress dots */}
               <div className="flex items-center gap-2 mb-8 anim-nav">
-                {[1,2,3,4].map(d => (
+                {[1,2,3,4,5].map(d => (
                   <div key={d} className={`dot-base ${step === d ? 'dot-active' : ''}`} />
                 ))}
               </div>
@@ -302,7 +457,8 @@ export const Configurator = () => {
 
                 <button
                   onClick={() => {
-                    if (step === 4) {
+                    if (step === 5) {
+                      if (!validateStep5()) return;
                       navigate("/thanks", {
                         state: {
                           configurator: {
@@ -310,6 +466,11 @@ export const Configurator = () => {
                             budget: selected[2],
                             quantity: selected[3],
                             branding: selected[4],
+
+                            name: userDetails.name,
+                            company: userDetails.company,
+                            email: userDetails.email,
+                            phone: userDetails.phone,
                           },
                         },
                       });
@@ -319,7 +480,7 @@ export const Configurator = () => {
                   }}
                   className="btn-sweep bg-brand-dark-olive text-brand-beige px-12 py-5 text-[10px] font-bold uppercase tracking-widest"
                 >
-                  <span>{step === 4 ? "Finish" : "Continue"}</span>
+                  <span>{step === 5 ? "Finish" : "Continue"}</span>
                 </button>
               </div>
             </div>
