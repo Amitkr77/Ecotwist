@@ -19,6 +19,14 @@ import OurClients from '../components/client';
 import curated1 from '../assests/homecure1.jpg'
 import curated2 from '../assests/contact2.jpeg'
 import impact from '../assests/homeimpact.avif'
+import cp from '../assests/clientpartner.avif'
+import empwell from '../assests/empwell.avif'
+import bgift from '../assests/birthdygift.webp'
+import awardrec from '../assests/awardrecog.webp'
+import launch from '../assests/prodlaunch.avif'
+import retire from '../assests/retdgift.jpg'
+import workani from '../assests/workani.avif'
+import festgift from '../assests/festgift.jpg'
 import EcotwistComingSoon from '../components/Coming';
 /* ─────────────────────────────────────────────
    TYPES
@@ -175,16 +183,16 @@ function useOccasionSliderConfig() {
    DATA
 ───────────────────────────────────────────── */
 export const occasionData: OccasionItem[] = [
-  { title: 'Client Partnerships', img: 'https://plus.unsplash.com/premium_photo-1770375699097-0c84230ef551?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=60&w=3000', accent: '#b5a26a', tag: 'B2B', path: '/occasions/client-appreciation' },
+  { title: 'Client Partnerships', img: cp, accent: '#b5a26a', tag: 'B2B', path: '/occasions/client-appreciation' },
   { title: 'Employee Onboarding', img: emp, accent: '#5a8a6e', tag: 'HR', path: '/occasions/employee-onboarding' },
-  { title: 'Festive Gifting', img: 'https://m.media-amazon.com/images/I/911DmteGNkL.jpg', accent: '#c4735d', tag: 'Seasonal', path: '/occasions/festive-gifting' },
+  { title: 'Festive Gifting', img: festgift, accent: '#c4735d', tag: 'Seasonal', path: '/occasions/festive-gifting' },
   { title: 'Events & Conferences', img: conf, accent: '#6b7fa3', tag: 'Events', path: '/occasions/events-conferences' },
-  { title: 'Employee Wellness', img: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2020&auto=format&fit=crop', accent: '#8a7db5', tag: 'Wellness', path: '/occasions/employee-wellness' },
-  { title: 'Birthday Gifting', img: 'https://temptationscakes.com.sg/cdn/shop/articles/unnamed3.jpg?v=1753454464', accent: '#d4856a', tag: 'Personal', path: '/occasions/birthday-gifting' },
-  { title: 'Work Anniversary', img: 'https://parade.com/.image/w_2560%2Cq_auto%3Agood%2Cc_fill%2Car_4%3A3/MTk1NTMwNTI5MzM5MDkwNTAx/work-anniversary-wishes-and-messages.jpg?arena_f_auto=', accent: '#7a9e7e', tag: 'Milestone', path: '/occasions/work-anniversary' },
-  { title: 'Product Launch', img: 'https://images.unsplash.com/photo-1556741533-974f8e62a92d?q=80&w=1974&auto=format&fit=crop', accent: '#5b8fa8', tag: 'Brand', path: '/occasions/product-launch' },
-  { title: 'Award & Recognition', img: 'https://www.applauz.me/hs-fs/hubfs/Resources/group-people-are-celebrating-with-trophy-air.jpg?height=420&name=group-people-are-celebrating-with-trophy-air.jpg&width=800', accent: '#c4a23a', tag: 'Culture', path: '/occasions/award-recognition' },
-  { title: 'Retirement Gifting', img: 'https://m.media-amazon.com/images/I/81uwXmahKQL.jpg', accent: '#9c7bb5', tag: 'Farewell', path: '/occasions/retirement-gifting' },
+  { title: 'Employee Wellness', img: empwell, accent: '#8a7db5', tag: 'Wellness', path: '/occasions/employee-wellness' },
+  { title: 'Birthday Gifting', img: bgift, accent: '#d4856a', tag: 'Personal', path: '/occasions/birthday-gifting' },
+  { title: 'Work Anniversary', img: workani, accent: '#7a9e7e', tag: 'Milestone', path: '/occasions/work-anniversary' },
+  { title: 'Product Launch', img: launch, accent: '#5b8fa8', tag: 'Brand', path: '/occasions/product-launch' },
+  { title: 'Award & Recognition', img: awardrec, accent: '#c4a23a', tag: 'Culture', path: '/occasions/award-recognition' },
+  { title: 'Retirement Gifting', img: retire, accent: '#9c7bb5', tag: 'Farewell', path: '/occasions/retirement-gifting' },
 ];
 
 const processSteps: ProcessStepItem[] = [

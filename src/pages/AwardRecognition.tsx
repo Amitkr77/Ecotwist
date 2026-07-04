@@ -3,6 +3,13 @@ import {
   motion, useScroll, useTransform, useSpring, useMotionValue, useInView,
 } from 'motion/react';
 import type { Variants } from 'motion/react';
+import a1 from '../assests/contact2.jpeg';
+import a2 from '../assests/awardrecog/a2.jpeg';
+import a3 from '../assests/awardrecog/a3.jpeg';
+import c1 from '../assests/awardrecog/cat1.avif';
+import c2 from '../assests/awardrecog/cat2.jpeg';
+import c3 from '../assests/awardrecog/cat3.jpeg';
+import about from '../assests/awardrecog/about.jpeg';
 import { ArrowRight } from 'lucide-react';
 
 /* ─────────────────────────────────────────────
@@ -898,15 +905,15 @@ const ACCENT      = '#c4a23a';
 const ACCENT_DARK = '#1a1400';
 
 const PRODUCTS = [
-  { name: 'Gold Excellence Hamper',    sub: 'Starting at ₹3,499', tag: 'Luxury',       img: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=600&q=80' },
-  { name: 'Engraved Crystal Trophy',   sub: 'Starting at ₹2,999', tag: 'Customizable', img: 'https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=600&q=80' },
-  { name: 'Premium Leather Portfolio', sub: 'Starting at ₹1,999', tag: 'Premium',      img: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80' },
+  { name: 'Gold Excellence Hamper',    sub: 'Starting at ₹3,499', tag: 'Luxury',       img: a1 },
+  { name: 'Engraved Crystal Trophy',   sub: 'Starting at ₹2,999', tag: 'Customizable', img: a2 },
+  { name: 'Premium Leather Portfolio', sub: 'Starting at ₹1,999', tag: 'Premium',      img: a3 },
 ];
 
 const CATEGORIES = [
-  { name: 'Top Performer Awards',  desc: 'Luxurious gifts for your highest achievers — because extraordinary performance deserves extraordinary recognition.', accent: ACCENT,    tag: 'Excellence', img: 'https://cdn.sanity.io/images/qiodnnh0/production/e5976f054f91cf54cfc34888c28b9edb29704549-600x400.jpg?auto=format&fit=max&q=75&w=2000' },
-  { name: 'Long Service Honours',  desc: 'Prestigious awards and curated gifts celebrating decades of outstanding commitment to your organisation.',           accent: '#a8882e', tag: 'Legacy',     img: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&q=80' },
-  { name: 'Innovation Champions',  desc: 'Special recognition for the creative minds who drive your organisation forward with bold, fresh thinking.',          accent: '#8a6e20', tag: 'Innovation', img: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=80' },
+  { name: 'Top Performer Awards',  desc: 'Luxurious gifts for your highest achievers — because extraordinary performance deserves extraordinary recognition.', accent: ACCENT,    tag: 'Excellence', img: c1 },
+  { name: 'Long Service Honours',  desc: 'Prestigious awards and curated gifts celebrating decades of outstanding commitment to your organisation.',           accent: '#a8882e', tag: 'Legacy',     img: c2 },
+  { name: 'Innovation Champions',  desc: 'Special recognition for the creative minds who drive your organisation forward with bold, fresh thinking.',          accent: '#8a6e20', tag: 'Innovation', img: c3 },
 ];
 
 const CUSTOM_ITEMS = [
@@ -973,7 +980,7 @@ function ProductCard({ item, index }: { item: typeof PRODUCTS[0]; index: number 
       onHoverStart={() => setHovered(true)} onHoverEnd={() => setHovered(false)}
       className="cursor-pointer" style={{ minWidth: 360, scrollSnapAlign: 'start' }}>
       <div className="relative overflow-hidden mb-4" style={{ aspectRatio: '1', borderRadius: 16 }}>
-        <motion.img src={item.img} alt={item.name} className="w-full h-full object-cover"
+        <motion.img src={item.img} alt={item.name} className="h-[380px] w-full object-cover"
           animate={{ scale: hovered ? 1.06 : 1 }} transition={{ duration: 0.65, ease: EASE }} style={{ willChange: 'transform' }} />
         <span className="absolute top-4 left-4 text-[10px] font-bold uppercase text-white px-4 py-1 rounded-full"
           style={{ background: 'rgba(168,136,46,0.9)', backdropFilter: 'blur(6px)', letterSpacing: 2 }}>{item.tag}</span>
@@ -1141,7 +1148,7 @@ export default function AwardRecognition() {
             transition={{ duration: 0.85, ease: EASE }} style={{ perspective: '1200px' }}>
             <motion.div ref={aRef} onMouseMove={aMM} onMouseLeave={aML}
               style={{ rotateX: aX, rotateY: aY, transformStyle: 'preserve-3d', willChange: 'transform' }}>
-              <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=900&q=80" alt="Award Recognition"
+              <img src={about} alt="Award Recognition"
                 className="w-full rounded-2xl shadow-2xl" style={{ aspectRatio: '4/5', objectFit: 'cover' }} />
             </motion.div>
           </motion.div>
@@ -1213,7 +1220,7 @@ export default function AwardRecognition() {
           <motion.div variants={vSlideRight} initial="hidden" animate={custInView ? 'show' : 'hidden'} style={{ position: 'relative' }}>
             <div className="absolute inset-0 rounded-3xl opacity-40" style={{ background: ACCENT, transform: 'rotate(3deg) scale(0.95)' }} />
             <div className="relative rounded-3xl overflow-hidden p-6" style={{ background: '#f0e9cc' }}>
-              <img src="https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=800&q=80" alt="Award"
+              <img src={a2} alt="Award"
                 className="w-full rounded-2xl shadow-xl" style={{ aspectRatio: '1', objectFit: 'cover' }} />
             </div>
           </motion.div>
