@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowLeft, CheckCircle } from 'lucide-react';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 /* ─────────────────────────────────────────────
    Only animation keyframes injected globally.
@@ -198,8 +198,8 @@ export const Configurator = () => {
     <>
       <style dangerouslySetInnerHTML={{ __html: ANIM_STYLES }} />
 
-      <div className="bg-brand-beige min-h-screen">
-        <main className="max-w-7xl mx-auto px-6 lg:px-10 py-6 grid lg:grid-cols-12 gap-12 lg:gap-24 items-start">
+      <div className="bg-brand-beige min-h-screen mt-14">
+        <main className="max-w-7xl mx-auto px-6 lg:px-10 py-6 grid lg:grid-cols-12 gap-10 lg:gap-20 items-start">
 
           {/* ── LEFT ── */}
           <div className="lg:col-span-7">
@@ -303,7 +303,16 @@ export const Configurator = () => {
                 <button
                   onClick={() => {
                     if (step === 4) {
-                      navigate("/product");
+                      navigate("/thanks", {
+                        state: {
+                          configurator: {
+                            occasion: selected[1],
+                            budget: selected[2],
+                            quantity: selected[3],
+                            branding: selected[4],
+                          },
+                        },
+                      });
                     } else {
                       goToStep(step + 1);
                     }
