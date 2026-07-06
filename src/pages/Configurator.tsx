@@ -241,6 +241,25 @@ export const Configurator = () => {
   const content  = stepContent[step];
   const [img1, img2] = images[step];
   const quote    = quotes[step];
+
+  async function submitConfigurator(data: any) {
+    const response = await fetch(
+      `${import.meta.env.VITE_API_URL}/api/configurator`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...data,
+          submissionId: `ECO-${Date.now()}`,
+          submittedAt: new Date().toISOString(),
+        }),
+      }
+    );
+
+    return await response.json();
+  }
   
 
   return (
@@ -457,24 +476,41 @@ export const Configurator = () => {
                 </button>
 
                 <button
-                  onClick={() => {
+                  onClick={async () => {
                     if (step === 5) {
-                      if (!validateStep5()) return;
-                      navigate("/thanks", {
-                        state: {
-                          configurator: {
-                            occasion: selected[1],
-                            budget: selected[2],
-                            quantity: selected[3],
-                            branding: selected[4],
 
-                            name: userDetails.name,
-                            company: userDetails.company,
-                            email: userDetails.email,
-                            phone: userDetails.phone,
-                          },
-                        },
-                      });
+                      if (!validateStep5()) return;
+
+                      const configurator = {
+                        occasion: selected[1],
+                        budget: selected[2],
+                        quantity: selected[3],
+                        branding: selected[4],
+
+                        name: userDetails.name,
+                        company: userDetails.company,
+                        email: userDetails.email,
+                        phone: userDetails.phone,
+                      };
+
+                      try {
+                        const result = await submitConfigurator(configurator);
+
+                        if (result.success) {
+                          navigate("/thanks", {
+                            state: {
+                              configurator,
+                            },
+                          });
+                        } else {
+                          alert(result.message);
+                        }
+
+                      } catch (err) {
+                        console.error(err);
+                        alert("Unable to connect to the server.");
+                      }
+
                     } else {
                       goToStep(step + 1);
                     }

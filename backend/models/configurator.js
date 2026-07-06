@@ -15,4 +15,4 @@ const configuratorSchema = new mongoose.Schema({
   submittedAt: Date,
 });
 
-module.exports = mongoose.model("Configurator", configuratorSchema);
+module.exports = mongoose.model("configurator", configuratorSchema);
