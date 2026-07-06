@@ -3,6 +3,9 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv").config();
 
+const Newsletter = require("./models/Newsletter");
+const Configurator = require("./models/configurator");
+
 const app = express();
 
 app.use(cors());
@@ -39,15 +42,9 @@ app.post("/api/contact", async (req, res) => {
   }
 });
 
-app.listen(process.env.PORT || 5000, () => {
-  console.log("Server running on port 5000");
-});
-
 // =============================
 // Configurator API
 // =============================
-
-const Configurator = require("./models/Configurator");
 
 app.post("/api/configurator", async (req, res) => {
   try {
@@ -74,7 +71,6 @@ app.post("/api/configurator", async (req, res) => {
 // Newsletter API
 // =============================
 
-const Newsletter = require("./models/Newsletter");
 app.post("/api/newsletter", async (req, res) => {
   try {
     const { email } = req.body;
@@ -117,4 +113,8 @@ app.post("/api/newsletter", async (req, res) => {
       message: "Server Error",
     });
   }
+});
+
+app.listen(process.env.PORT || 5000, () => {
+  console.log("Server running on port 5000");
 });
