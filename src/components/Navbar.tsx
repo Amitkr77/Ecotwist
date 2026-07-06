@@ -36,6 +36,14 @@ const OCCASIONS = [
     accent: '#c4735d',
     tag: 'Seasonal',
   },
+    {
+    label: 'Diwali Gifting',
+    path: '/occasions/diwali-gifting',
+    icon: Sparkles,
+    desc: 'Celebrate the festival of lights with sustainable gifts.',
+    accent: '#c4735d',
+    tag: 'Seasonal',
+  },
   {
     label: 'Events & Conferences',
     path: '/occasions/events-conferences',
@@ -91,14 +99,6 @@ const OCCASIONS = [
     desc: 'A graceful send-off for a remarkable journey.',
     accent: '#9c7bb5',
     tag: 'Farewell',
-  },
-  {
-    label: 'Diwali Gifting',
-    path: '/occasions/diwali-gifting',
-    icon: Sparkles,
-    desc: 'Celebrate the festival of lights with sustainable gifts.',
-    accent: '#c4735d',
-    tag: 'Seasonal',
   },  
 ];
 
