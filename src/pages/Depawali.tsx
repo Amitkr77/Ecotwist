@@ -7,25 +7,25 @@ import {
 } from "motion/react";
 import type { Variants } from "motion/react";
 import { useNavigate } from "react-router-dom";
-import hamper from "../assests/dewali/diwalihamper.png";
-import folio from "../assests/dewali/dewaliportfolio.png"
-import cxo from "../assests/dewali/cxogift.png"
-import delight from "../assests/dewali/delight.png"
-import celebration from "../assests/dewali/familyceleb.png"
-import hamper1 from "../assests/dewali/clienthamper.png"
-import wellnesshamper from "../assests/dewali/Wellnesshamper.png"
-import gourmethamper from "../assests/dewali/gourmethamper.png"
-import signature from "../assests/dewali/signhamper.png"
-import curated from "../assests/dewali/curated.png"
-import branding from "../assests/dewali/branding.png"
-import sustain from "../assests/dewali/sustainable.png"
-import dryfruits from "../assests/dewali/dryfruit.png"
-import liuxurybox from "../assests/dewali/luxurybox.png"
-import festworkspace from "../assests/dewali/festworkspace.png"
-import gifthing from "../assests/dewali/empgifting.png"
-import packaging from "../assests/dewali/prepackaging.png"
-import luxhamper from "../assests/dewali/luxuryhamper.png"
-import catalogue from "../assests/dewali/DepawaliCatalogue2026.pdf"
+import hamper from "../assests/Depawali/Depawalihamper.png";
+import folio from "../assests/Depawali/Depawaliportfolio.png"
+import cxo from "../assests/Depawali/cxogift.png"
+import delight from "../assests/Depawali/delight.png"
+import celebration from "../assests/Depawali/familyceleb.png"
+import hamper1 from "../assests/Depawali/clienthamper.png"
+import wellnesshamper from "../assests/Depawali/Wellnesshamper.png"
+import gourmethamper from "../assests/Depawali/gourmethamper.png"
+import signature from "../assests/Depawali/signhamper.png"
+import curated from "../assests/Depawali/curated.png"
+import branding from "../assests/Depawali/branding.png"
+import sustain from "../assests/Depawali/sustainable.png"
+import dryfruits from "../assests/Depawali/dryfruit.png"
+import liuxurybox from "../assests/Depawali/luxurybox.png"
+import festworkspace from "../assests/Depawali/festworkspace.png"
+import gifthing from "../assests/Depawali/empgifting.png"
+import packaging from "../assests/Depawali/prepackaging.png"
+import luxhamper from "../assests/Depawali/luxuryhamper.png"
+import catalogue from "../assests/Depawali/DepawaliCatalogue2026.pdf"
 import {
   ArrowRight,
   Sparkles,
@@ -155,7 +155,7 @@ const BADGES = [
 ];
 
 /* ============================
-   Diwali Collections
+   Depawali Collections
 ============================ */
 
 const COLLECTIONS = [
@@ -189,7 +189,7 @@ const COLLECTIONS = [
    Main Page
 ============================ */
 
-const DIWALI_COLLECTIONS = [
+const Depawali_COLLECTIONS = [
   {
     title: "Executive Luxury",
     subtitle: "For CXOs & Leadership",
@@ -234,7 +234,7 @@ const DIWALI_COLLECTIONS = [
   },
 ];
 
-export default function DiwaliGifting() {
+export default function DepawaliGifting() {
 
 const navigate = useNavigate();
 
@@ -585,7 +585,7 @@ const navigate = useNavigate();
 
                 <br />
 
-                Diwali
+                Depawali
 
                 <br />
 
@@ -756,7 +756,7 @@ const navigate = useNavigate();
 
                     <img
                         src={hamper}
-                        alt="Luxury Diwali Hamper"
+                        alt="Luxury Depawali Hamper"
                         className="w-[120px] sm:w-[220px] lg:w-[260px] object-cover rounded-2xl"
                     />
 
@@ -1131,7 +1131,7 @@ const navigate = useNavigate();
 
               <p className="mt-6 sm:mt-8 text-base sm:text-lg leading-7 sm:leading-9 text-gray-600">
 
-                Diwali is more than a celebration—it is a moment to express gratitude,
+                Depawali is more than a celebration—it is a moment to express gratitude,
                 strengthen partnerships and create memorable experiences.
                 Every Ecotwist gift box is thoughtfully designed using sustainable
                 materials, handcrafted products and timeless aesthetics to help your
@@ -1193,7 +1193,7 @@ const navigate = useNavigate();
 
                   src={folio}
 
-                  alt="Diwali"
+                  alt="Depawali"
 
                   className="w-full h-[320px] sm:h-[450px] lg:h-[650px] object-cover"
 
@@ -1373,7 +1373,7 @@ const navigate = useNavigate();
 
               <span className="italic text-brand-gold">
 
-                Diwali Hampers
+                Depawali Hampers
 
               </span>
 
@@ -1392,7 +1392,7 @@ const navigate = useNavigate();
 
           <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10">
 
-            {DIWALI_COLLECTIONS.map((item,index)=>(
+            {Depawali_COLLECTIONS.map((item,index)=>(
 
               <motion.div
 
@@ -1634,7 +1634,7 @@ const navigate = useNavigate();
 
                 <br/>
 
-                Diwali Hamper
+                Depawali Hamper
 
               </h2>
 
@@ -2309,7 +2309,7 @@ const navigate = useNavigate();
                 <p className="mt-4 max-w-2xl text-white/80 leading-8">
 
                   Collaborate with our gifting experts to create a completely
-                  customised Diwali hamper tailored to your brand and audience.
+                  customised Depawali hamper tailored to your brand and audience.
 
                 </p>
 
@@ -2388,7 +2388,7 @@ const navigate = useNavigate();
 
             <p className="mt-8 max-w-3xl mx-auto text-lg leading-8 text-gray-600">
 
-              Every Ecotwist Diwali hamper is designed to celebrate the festival
+              Every Ecotwist Depawali hamper is designed to celebrate the festival
               while reducing environmental impact through conscious materials,
               ethical sourcing and reusable packaging.
 
@@ -3131,7 +3131,7 @@ const navigate = useNavigate();
 
             <p className="mt-8 text-lg text-gray-600 max-w-3xl mx-auto">
 
-              Every Diwali season, organizations across India trust Ecotwist
+              Every Depawali season, organizations across India trust Ecotwist
               to create unforgettable gifting experiences.
 
             </p>
@@ -3144,7 +3144,7 @@ const navigate = useNavigate();
               {
                 name:"Ananya Sharma",
                 company:"HR Head • TechNova",
-                review:"Our employees absolutely loved the Diwali hampers. The presentation, sustainability and premium quality exceeded expectations."
+                review:"Our employees absolutely loved the Depawali hampers. The presentation, sustainability and premium quality exceeded expectations."
               },
               {
                 name:"Rahul Mehta",
@@ -3339,7 +3339,7 @@ const navigate = useNavigate();
 
           <span className="uppercase tracking-[0.4em] text-xs text-brand-gold">
 
-            Celebrate Diwali 2026
+            Celebrate Depawali 2026
 
           </span>
 
@@ -3357,7 +3357,7 @@ const navigate = useNavigate();
 
           <p className="mt-10 text-xl text-white/80 leading-9 max-w-3xl mx-auto">
 
-            Partner with Ecotwist to craft premium sustainable Diwali hampers
+            Partner with Ecotwist to craft premium sustainable Depawali hampers
             that celebrate your employees, clients and partners with elegance,
             responsibility and unforgettable experiences.
 

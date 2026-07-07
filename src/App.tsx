@@ -24,7 +24,7 @@ import WorkAnniversary    from './pages/WorkAnniversary.tsx';
 import ProductLaunch      from './pages/ProductLaunch.tsx';
 import AwardRecognition   from './pages/AwardRecognition.tsx';
 import RetirementGifting  from './pages/RetirementGifting.tsx';
-import DiwaliGifting from './pages/Diwali.tsx';
+import DepawaliGifting from './pages/Depawali.tsx';
 import  ProductList  from './pages/Products.tsx';
 
 // ── Policy pages ──────────────────────────────────────
@@ -79,7 +79,7 @@ const AnimatedRoutes = () => {
         <Route path="/occasions/product-launch"      element={<PageWrapper><ProductLaunch /></PageWrapper>} />
         <Route path="/occasions/award-recognition"   element={<PageWrapper><AwardRecognition /></PageWrapper>} />
         <Route path="/occasions/retirement-gifting"  element={<PageWrapper><RetirementGifting /></PageWrapper>} />
-        <Route path="/occasions/diwali-gifting"      element={<PageWrapper><DiwaliGifting /></PageWrapper>} />
+        <Route path="/occasions/Depawali-gifting"      element={<PageWrapper><DepawaliGifting /></PageWrapper>} />
         <Route path="/products"                      element={<PageWrapper><ProductList /></PageWrapper>} />
 
         {/* ── Policy routes ── */}
