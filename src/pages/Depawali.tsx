@@ -7,25 +7,25 @@ import {
 } from "motion/react";
 import type { Variants } from "motion/react";
 import { useNavigate } from "react-router-dom";
-import hamper from "../assests/dewali/diwalihamper.png";
-import folio from "../assests/dewali/dewaliportfolio.png"
-import cxo from "../assests/dewali/cxogift.png"
-import delight from "../assests/dewali/delight.png"
-import celebration from "../assests/dewali/familyceleb.png"
-import hamper1 from "../assests/dewali/clienthamper.png"
-import wellnesshamper from "../assests/dewali/Wellnesshamper.png"
-import gourmethamper from "../assests/dewali/gourmethamper.png"
-import signature from "../assests/dewali/signhamper.png"
-import curated from "../assests/dewali/curated.png"
-import branding from "../assests/dewali/branding.png"
-import sustain from "../assests/dewali/sustainable.png"
-import dryfruits from "../assests/dewali/dryfruit.png"
-import liuxurybox from "../assests/dewali/luxurybox.png"
-import festworkspace from "../assests/dewali/festworkspace.png"
-import gifthing from "../assests/dewali/empgifting.png"
-import packaging from "../assests/dewali/prepackaging.png"
-import luxhamper from "../assests/dewali/luxuryhamper.png"
-import catalogue from "../assests/dewali/DepawaliCatalogue2026.pdf"
+import hamper from "../assests/depawali/diwalihamper.png";
+import folio from "../assests/depawali/dewaliportfolio.png";
+import cxo from "../assests/depawali/cxogift.png";
+import delight from "../assests/depawali/delight.png";
+import celebration from "../assests/depawali/familyceleb.png";
+import hamper1 from "../assests/depawali/clienthamper.png";
+import wellnesshamper from "../assests/depawali/Wellnesshamper.png";
+import gourmethamper from "../assests/depawali/gourmethamper.png";
+import signature from "../assests/depawali/signhamper.png";
+import curated from "../assests/depawali/curated.png"
+import branding from "../assests/depawali/branding.png"
+import sustain from "../assests/depawali/sustainable.png"
+import dryfruits from "../assests/depawali/dryfruit.png"
+import liuxurybox from "../assests/depawali/luxurybox.png"
+import festworkspace from "../assests/depawali/festworkspace.png"
+import gifthing from "../assests/depawali/empgifting.png"
+import packaging from "../assests/depawali/prepackaging.png"
+import luxhamper from "../assests/depawali/luxuryhamper.png"
+import catalogue from "../assests/depawali/DepawaliCatalogue2026.pdf"
 import {
   ArrowRight,
   Sparkles,

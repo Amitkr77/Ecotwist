@@ -16,17 +16,17 @@ import conf from '../assests/confe.png';
 import emp from '../assests/empl.png';
 import heroVideo from '../assests/hero1.mp4';
 import OurClients from '../components/client';
-import curated1 from '../assests/homecure1.jpg'
-import curated2 from '../assests/contact2.jpeg'
-import impact from '../assests/homeimpact.avif'
-import cp from '../assests/clientpartner.avif'
-import empwell from '../assests/empwell.avif'
-import bgift from '../assests/birthdygift.webp'
-import awardrec from '../assests/awardrecog.webp'
-import launch from '../assests/prodlaunch.avif'
-import retire from '../assests/retdgift.jpg'
-import workani from '../assests/workani.avif'
-import festgift from '../assests/festgift.jpg'
+import curated1 from '../assests/homecure1.jpg';
+import curated2 from '../assests/contact2.jpeg';
+import impact from '../assests/homeimpact.avif';
+import cp from '../assests/clientpartner.avif';
+import empwell from '../assests/empwell.avif';
+import bgift from '../assests/birthdygift.webp';
+import awardrec from '../assests/awardrecog.webp';
+import launch from '../assests/prodlaunch.avif';
+import retire from '../assests/retdgift.jpg';
+import workani from '../assests/workani.avif';
+import festgift from '../assests/festgift.jpg';
 import EcotwistComingSoon from '../components/Coming';
 /* ─────────────────────────────────────────────
    TYPES
