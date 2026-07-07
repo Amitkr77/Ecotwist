@@ -29,7 +29,7 @@ const OCCASIONS = [
     tag: 'HR',
   },
   {
-    label: 'Diwali Gifting',
+    label: 'Depawali Gifting',
     path: '/occasions/diwali-gifting',
     icon: Sparkles,
     desc: 'Celebrate the festival of lights with sustainable gifts.',
