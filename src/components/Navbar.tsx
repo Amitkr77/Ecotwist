@@ -30,7 +30,7 @@ const OCCASIONS = [
   },
   {
     label: 'Depawali Giftings',
-    path: '/occasions/Depawali-gifting',
+    path: '/occasions/diwali-gifting',
     icon: Sparkles,
     desc: 'Celebrate the festival of lights with sustainable gifts.',
     accent: '#c4735d',
