@@ -964,7 +964,7 @@ export default function FestiveGifting(){
                 style={{inset:-16,background:'#dcfce7',transform:'rotate(-2deg)',zIndex:0}}
                 whileHover={{rotate:0} as any}/>
               <div className="overflow-hidden rounded-2xl relative z-10">
-                <img src="https://previews.123rf.com/images/espies/espies2011/espies201100222/158560385-indian-family-lighting-or-arranging-oil-lamp-or-diya-around-flower-rangoli-on-Depawali-festival-night.jpg"
+                <img src="https://previews.123rf.com/images/espies/espies2011/espies201100222/158560385-indian-family-lighting-or-arranging-oil-lamp-or-diya-around-flower-rangoli-on-diwali-festival-night.jpg"
                   alt="About" className="w-full shadow-2xl" style={{aspectRatio:'4/3',objectFit:'cover',borderRadius:16}}/>
               </div>
             </motion.div>
